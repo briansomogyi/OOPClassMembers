@@ -1,15 +1,22 @@
 ﻿namespace OOPClassMembers
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Person p = new Person("2344");
-            // Console.WriteLine(p._firstName);
-            // Console.WriteLine(p._lastName);
-            Console.WriteLine(p.MaxLifespanYears);
-            // Console.WriteLine(p._cnp);
-            Person.PopulationCount = 1;
+            Person p = new Person("2234");
+            Console.Write("What's your name? "); p.Name = Console.ReadLine();
+            p.SayHello();
+            
+            int maxLifespan = Person.InitMaxLifespan();
+            p.FirstName = "Brian";
+            p.LastName = "Somogyi";
+            // p.Cnp="2344";
+            
+            Console.WriteLine(Person.PopulationCount);
+            Console.WriteLine(p.FirstName);
+            Console.WriteLine(p.LastName);
+            Console.WriteLine(p.Cnp);
         }
     }
 }
