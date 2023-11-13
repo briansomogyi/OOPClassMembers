@@ -4,6 +4,10 @@
     {
         public static void Main()
         {
+            IntArray intArray = new IntArray(new[] { 1, 2, 3 });
+            int min = intArray.Min();
+            intArray[0] = 123;
+            
             int numberOfPersons = ReadNumber("Number of Persons: ", 3);
             Person[] arrayOfPersons=new Person[numberOfPersons];
             for (int i = 0; i < numberOfPersons; i++)
